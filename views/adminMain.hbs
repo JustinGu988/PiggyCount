@@ -1,0 +1,52 @@
+{{! This page displays the user's data from the database, so it must be secured. }}
+
+{{#with data.admin}}
+
+<h1>Welcome, <em>{{displayname}}!</em></h1>
+
+<p>Administrator' home page. Only users who have logged in WITH ADMIN ROLE can see this page. </p>
+
+<h2>{{displayname}}'s Role</h2>
+
+<p> {{role}} </p>
+
+{{/with}}
+
+<h2>List of students:</h2>
+
+<table class="transcript">
+    <thead>
+        <th>UserName</th>
+    </thead>
+    <tbody>
+        {{#each data.acctUsers}}
+        <tr>
+            <td>{{username}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+<h2>Create new user:</h2>
+
+<form action="" method="POST">
+    <label class="form-label"> Username:</label>
+    <input type="text" name="userName" /></br>
+
+    <label class="form-label"> Displayname:</label>
+    <input type="text" name="disName" /></br>
+
+    <label class="form-label"> Role: admin/acctUser</label>
+    <input type="text" name="role" /></br>
+
+    <label class="form-label"> Password:</label>
+    <input type="text" name="pwd" /></br>
+
+    <button type="submit" class="submit-button">Submit</button></br>
+</form>
+
+
+<form class="logout" action="/logout" method="post">
+    <button type="submit">Log Out</button>
+</form>
