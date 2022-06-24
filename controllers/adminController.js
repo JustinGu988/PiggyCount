@@ -122,7 +122,6 @@ const show404Page = (req, res) => {
 module.exports = {
     postNewUser,
 
-
     isAuthenticated,
     hasRole,
     showLoginPage,

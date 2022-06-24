@@ -8,6 +8,14 @@ const userSchema = new mongoose.Schema({
     displayname: { type: String, required: true },
     password: { type: String, required: true },
     role: { type: String, required: true, default: "acctUser" },
+    friends: [{
+        username: { type: String, required: true },
+        userID: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+            required: true,
+        }
+    }],
     byMePendingTran: [{           // unpaid, paid by me
         type: mongoose.Schema.Types.ObjectId,
         ref: "Transaction",

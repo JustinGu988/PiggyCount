@@ -1,0 +1,21 @@
+<form action="" method="POST">
+    <label class="form-label"> Search by Username:</label>
+    <input type="text" name="userName" /></br>
+
+    <button type="submit" class="submit-button">Add</button></br>
+</form>
+
+
+<h2>{{acctUser.displayname}}'s Friend List:</h2>
+<table class="transcript">
+    <thead>
+        <th>Username</th>
+    </thead>
+    <tbody>
+        {{#each friends}}
+        <tr>
+            <td>{{username}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

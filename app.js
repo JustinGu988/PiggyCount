@@ -54,12 +54,12 @@ const { redirect } = require('express/lib/response')
 
 // ROUTES START HERE
 // Load authentication router
-const authRouter = require('./routes/authRouter.js')
-app.use(authRouter)
 const adminRouter = require('./routes/adminRouter.js')
 app.use(adminRouter)
 const acctUserRouter = require('./routes/acctUserRouter.js')
 app.use(acctUserRouter)
+const authRouter = require('./routes/authRouter.js')
+app.use(authRouter)
 // END OF ROUTES
 
 

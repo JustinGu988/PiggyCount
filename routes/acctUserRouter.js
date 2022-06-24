@@ -8,6 +8,9 @@ const acctUserController = require('../controllers/acctUserController.js')
 ///////////////////////////////////////////
 
 router.post('/acctUser', acctUserController.postNewTransaction)
+router.get('/acctUser/friends', adminController.isAuthenticated, acctUserController.showFriendsPage)
+router.post('/acctUser/friends', acctUserController.postNewFriend)
+router.get('/accessDenied', acctUserController.showAccessDeniedPage)
 
 ///////////////////////////////////////////
 // END OF ACCTUSER CONTROL ROUTES

@@ -9,6 +9,24 @@
 {{/with}}
 
 
+<h2>Create new transaction:</h2>
+<form action="" method="POST">
+    <label class="form-label"> Total Amount:</label>
+    <input type="number" step="0.01" name="totalAmount" /></br>
+
+    <label class="form-label"> Description:</label>
+    <input type="text" name="description" /></br>
+
+    <label class="form-label"> Debtor's Username:</label>
+    <input type="text" name="paidFor" /></br>
+
+    <label class="form-label"> Debtor's Amount:</label>
+    <input type="number" step="0.01" name="userAmount" /></br>
+
+    <button type="submit" class="submit-button">Submit</button></br>
+</form>
+
+
 <h2>{{acctUser.displayname}}'s Pending Transaction, as a payer:</h2>
 <table class="transcript">
     <thead>
@@ -44,25 +62,6 @@
         {{/each}}
     </tbody>
 </table>
-
-
-<h2>Create new transaction:</h2>
-<form action="" method="POST">
-    <label class="form-label"> Total Amount:</label>
-    <input type="number" step="0.01" name="totalAmount" /></br>
-
-    <label class="form-label"> Description:</label>
-    <input type="text" name="description" /></br>
-
-    <label class="form-label"> Debtor's Username:</label>
-    <input type="text" name="paidFor" /></br>
-
-    <label class="form-label"> Debtor's Amount:</label>
-    <input type="number" step="0.01" name="userAmount" /></br>
-
-    <button type="submit" class="submit-button">Submit</button></br>
-</form>
-
 
 
 <form class="logout" action="/logout" method="post">
