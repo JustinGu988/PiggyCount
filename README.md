@@ -13,3 +13,6 @@ ver 1.1 (13 JUN 2022)
 
 ver 1.2 (25 Jun 2022)
 -Friends adding
+
+ver 1.3 (27 Jun 2022)
+-Dropdown list

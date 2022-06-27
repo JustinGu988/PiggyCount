@@ -92,7 +92,18 @@ const showAcctUserPage = async (req, res) => {
             byOtPendingTranArr.push(currTran)
         }
 
-        res.render('acctUserMain.hbs', { acctUser: req.user.toJSON(), byMe: byMePendingTranArr, byOt: byOtPendingTranArr })    // users without 'admin' role (acctUser) go to this page
+        let friList = []
+        for (var i = 0; i < req.user.friends.length; i++) {
+            const currFri = await Users.findById(req.user.friends[i].userID).lean()
+            friList.push(currFri)
+        }
+
+        res.render('acctUserMain.hbs', {
+            acctUser: req.user.toJSON(),
+            byMe: byMePendingTranArr,
+            byOt: byOtPendingTranArr,
+            friends: friList
+        })    // users without 'admin' role (acctUser) go to this page
     }
 }
 

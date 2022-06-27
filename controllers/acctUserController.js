@@ -64,6 +64,7 @@ const showFriendsPage = async (req, res) => {
     }
 }
 
+
 const postNewFriend = async (req, res, next) => {
     try {
         // capture input value

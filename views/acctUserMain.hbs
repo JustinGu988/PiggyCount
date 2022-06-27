@@ -18,7 +18,11 @@
     <input type="text" name="description" /></br>
 
     <label class="form-label"> Debtor's Username:</label>
-    <input type="text" name="paidFor" /></br>
+    <select name="paidFor">
+        {{#each friends}}
+        <option value={{username}}>{{username}}</option>
+        {{/each}}
+    </select></br>
 
     <label class="form-label"> Debtor's Amount:</label>
     <input type="number" step="0.01" name="userAmount" /></br>

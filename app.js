@@ -11,7 +11,8 @@ const port = process.env.PORT || 3000
 const exphbs = require('express-handlebars')
 app.engine('hbs', exphbs.engine({   // configure Handlebars
     defaultlayout: 'main',
-    extname: 'hbs'
+    extname: 'hbs',
+    //helpers: require('./public/js/helpers.js').helpers,
 }
 ))
 app.set('view engine', 'hbs')
