@@ -77,6 +77,10 @@ const postNewFriend = async (req, res, next) => {
         if (!currFri) {
             alert('User not found')
             return res.redirect('./friends')
+        } else if (currFri.username == req.user.username) {
+            // if the searched user is the user him/herself
+            alert('Cannot add yourself into the friend list')
+            return res.redirect('./friends')
         } else {
             // add this user into my friend list
             const newFri = {

@@ -16,3 +16,4 @@ ver 1.2 (25 Jun 2022)
 
 ver 1.3 (27 Jun 2022)
 -Dropdown list
+-Prevent self-friend adding
